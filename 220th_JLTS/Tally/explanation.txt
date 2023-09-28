@@ -1,0 +1,31 @@
+HOW UNIFORMS WORK:
+
+Every uniform consists of 2 config-parts
+
+1) An inventory config, registered in CFG weapons the same as any other inventory item.
+2) A unit config, registered in CFG vehicles as a unit/man.
+
+The inventory config only serves to set an inventory image and link to the unit config.
+The unit config is where you set armor values, textures and any other stuff you want to add.
+
+
+for the purpose of keeping thing organized and easy to tweak I have organized the uniforms in the following structure.
+
+[UNIFORMS]
+    -items.hpp  (A list including all item.hpp  files listed in the uniform folders)
+    -models.hpp (A list including all model.hpp files listed in the uniform folders)
+
+    [UNIFORM FOLDERS]
+        -item.hpp 
+        -model.hpp 
+
+HOW TO UPDATE TEXTURES:
+1) Copy a folder from uniforms and copy it there.
+2) Change the classNames to become unique.
+3) Make sure items.hpp and model.hpp are linking to eachother
+4) Copy the path to the texture you want to use
+5) Set armor values (optional)
+
+6) Enjoy!
+
+(StormTrooper Tally is an example of this)
