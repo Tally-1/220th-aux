@@ -10,7 +10,7 @@ class Clone_Commando_model: JLTS_Clone_P2_DC15A {
 	editorSubcategory    = "TAG_MySubcategory_1";
 	linkedItems[]        = {"TAG_220th_TrooperCOMMANDO","TAG_MyVest1","TAG_MyNVG","JLTS_clone_comlink","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 	respawnLinkedItems[] = {"TAG_220th_TrooperCOMMANDO","TAG_MyVest1","TAG_MyNVG","JLTS_clone_comlink","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
-	
+	model                = "\Clone_Armor_Unit\Republic_Commando_Armor.p3d";
 	hiddenSelectionsTextures[]=
 	{
 		"220th_JLTS\data\220th_RC_Camo1_co.paa",
