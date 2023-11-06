@@ -3,12 +3,14 @@ class 220th_Stormtrooper_model: JLTS_Clone_P2_DC15S
 	uniformClass = "220th_Stormtrooper_item";/*Link to the "Weapon class (Item) used to select this uniform*/
 	
 	/*Listing name*/
-	displayName  = "[220th] Stormtrooper";
-
-	author = RevanHilts;
+	displayName          = "[220th] Stormtrooper";
+	author               = RevanHilts;
 	
-	faction              = "TAG_MyFaction_1";
+	scope                = 2;
+	scopeCurator         = 2;
+	faction              = "220th_Unit";
 	editorSubcategory    = "TAG_MySubcategory_1";
+
 	linkedItems[]        = {"TAG_220th_Trooper","TAG_MyVest","TAG_MyNVG","JLTS_clone_comlink","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 	respawnLinkedItems[] = {"TAG_220th_Trooper","TAG_MyVest","TAG_MyNVG","JLTS_clone_comlink","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 	

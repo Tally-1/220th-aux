@@ -82,7 +82,7 @@ class TAG_MyBackpack_12: JLTS_Clone_RTO_pack {
 		"220th_JLTS\data\220th_LR_Radio.paa"
 	};
 };
-class TAG_MyBackpack_13: LST_Republic_Commando_BackPack {
+class 220th_Rep_Cmmnd_BckPck: LST_Republic_Commando_BackPack {
 	RevanHilts = RevanHilts;
 	displayName = "[220th] Clone COMMANDO Pack";
 	hiddenSelectionsTextures[] = {

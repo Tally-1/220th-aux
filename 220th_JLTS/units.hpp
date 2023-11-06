@@ -3,7 +3,7 @@
 	displayName = "[220th] Clone Trooper P2";
 	uniformClass = "TAG_MyUniform_1";
 	backpack = "TAG_MyBackpack_1";
-	faction = "TAG_MyFaction_1";
+	faction = "220th_Unit";
 	editorSubcategory = "TAG_MySubcategory_1";
 	hiddenSelectionsTextures[] = {
 		"220th_JLTS\data\220th_Trooper_Top.paa",
@@ -19,7 +19,7 @@ class TAG_MyUnit_2: JLTS_Droid_B1_E5 {
 	displayName = "My custom unit 2";
 	uniformClass = "TAG_MyUniform_2";
 	backpack = "TAG_MyBackpack_2";
-	faction = "TAG_MyFaction_2";
+	faction = "220th_Opposition";
 	editorSubcategory = "TAG_MySubcategory_2";
 	hiddenSelectionsTextures[] = {
 		"220th_JLTS\data\b1_co.paa"
@@ -32,8 +32,8 @@ class TAG_MyUnit_3: JLTS_Clone_P2_DC15A {
 	author = RevanHilts;
 	displayName = "[220th] Clone Commando";
 	uniformClass = "TAG_MyUniform_3";
-	backpack = "TAG_MyBackpack_13";
-	faction = "TAG_MyFaction_1";
+	backpack = "220th_Rep_Cmmnd_BckPck";
+	faction = "220th_Unit";
 	editorSubcategory = "TAG_MySubcategory_1";
 	hiddenSelections[]=
 	{
@@ -57,7 +57,7 @@ class TAG_MyUnit_4: JLTS_Droid_B1_E5 {
 	displayName = "[220th] Weequay Pirate";
 	uniformClass = "TAG_MyUniform_2";
 	backpack = "";
-	faction = "TAG_MyFaction_2";
+	faction = "220th_Opposition";
 	editorSubcategory = "TAG_MySubcategory_2";
 	hiddenSelectionsTextures[] = {
 		""

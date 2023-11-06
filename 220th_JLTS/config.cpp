@@ -64,6 +64,19 @@
 */
 #define AUTHOR You // macro to define the authors, replace "You" with whatever you like
 
+// class CfgEditorSubcategories {
+// 	class TAG_MySubcategory_1 { // category to display the units in inside the faction
+// 		displayName = "[200th]_Clones";
+// 	};
+// 	class TAG_MySubcategory_2 {
+// 		displayName = "[220th]_Mercenaries";
+// 	};
+// 	class TAG_MySubcategory_3 {
+// 		displayName = "[220th]_Imperials";
+// 	};
+// };
+
+
 class CfgPatches {
 	class TAG_220th_JLTS {
 		author = RevanHilts;
@@ -86,10 +99,20 @@ class CfgPatches {
 	};
 };
 
-#include "CfgFactionClasses.hpp"
+// class CfgEditorSubcategories {
+// 	class 220th_Clones_category {
+// 		displayName = "[200th]_Clones";
+// 	};
+// 	class 220th_Mercenaries_category {
+// 		displayName = "[220th]_Mercenaries";
+// 	};
+// 	class 220th_Imperials_category {
+// 		displayName = "[220th]_Imperials";
+// 	};
+// };
 
+#include "Factions\CfgFactionClasses.hpp"
 #include "CfgEditorSubcategories.hpp"
-
 #include "CfgWeapons.hpp"
-
 #include "CfgVehicles.hpp"
+#include "Factions\CfgGroups.hpp"
