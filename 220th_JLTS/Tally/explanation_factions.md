@@ -17,7 +17,7 @@ class B_TestSquad
 
 
 INGAME IMPLEMENTATION:
-Currently the Zeus implementation of custom groups is broken.
+Currently the Zeus implementation of custom groups is broken for JLTS units.
 This is due to some unknown config-error related to editorSubcategories.
 Most likely found in the asset mod.
 From my point of view fixing this would require restructuring the assets-mod.
