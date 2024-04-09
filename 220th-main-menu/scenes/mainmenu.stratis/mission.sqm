@@ -57,7 +57,7 @@ class Intro
 		year=2035;
 		month=6;
 		day=24;
-		hour=10;
+		hour=01;
 		minute=0;
 		startFogBase=250;
 		forecastFogBase=250;
