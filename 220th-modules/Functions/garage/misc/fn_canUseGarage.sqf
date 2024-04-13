@@ -17,7 +17,7 @@ exitWith{false;};
 
 if!(player inArea ([_nearest] call RVN_fnc_getModuleArea))
 exitWith{false;};
-
+ 
 if(_vehicle getVariable ["GRG_garageActivated", false])
 exitWith{false;};
 

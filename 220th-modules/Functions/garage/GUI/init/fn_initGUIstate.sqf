@@ -10,6 +10,7 @@ private _stateKeyValues = [
    ["dialog",                                  _dialog],
    ["dialogElements",                  _dialogElements],
    ["vehicle",                                _vehicle],
+   ["vehPos",                 getPosASLVisual _vehicle],
    ["textureCount",                      _textureCount],
    ["camera",                                  _camera],
    ["vehicleData",                                  []],

@@ -8,6 +8,7 @@ _state call ["initSelectionList"];
 _state call ["initButtons"];
 _state call ["setVehicleData", [_vehicle]];
 
+[] call GRG_fnc_freezeVehicle;
 
 waitUntil {sleep 0.1; isNull _dialog; };
 

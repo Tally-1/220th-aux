@@ -5,6 +5,7 @@ class GRG
         file = "\220th-modules\Functions\garage\misc"
         class useGarage     {};
         class canUseGarage  {};
+        class freezeVehicle {};
         
     };
 
