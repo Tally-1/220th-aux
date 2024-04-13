@@ -4,7 +4,7 @@
 #define backgroundVideo "\220th-main-menu\media\video\background.ogv"
 #define logoIcon        "\220th-main-menu\media\images\Logo_damascus_Rev2.paa"
 #define buttonTip       "Join the Battle"
-#define discordInvite   "https://discord.gg/220th"
+// #define discordInvite   
 
 class CfgPatches
 {
@@ -259,7 +259,7 @@ class RscDisplayMain: RscStandardDisplay
 			tooltip       = "Discord";
 			y             = "safezoneY + 0.68 * safezoneH";
 			onbuttonclick = "";
-			url           = discordInvite;
+			url           = "https://discord.gg/220th"; // discordInvite;
 		};
 
 		/***************************Logo*************************************/
