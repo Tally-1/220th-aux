@@ -9,7 +9,7 @@ class CfgFunctions
 			class switch                 {};
 			class switchOn               {};
 			class switchOff              {};
-			class engineLoop             {};
+			
 
 			class onKeyDown              {};
 			class onKeyUp                {};
@@ -44,9 +44,31 @@ class CfgFunctions
 			class setSpeed       {};
 			class setSideThrust  {};
 			class setLift        {};
-
-
 		};
+
+		class engine
+		{
+			file = "\220th-jetpack\Functions\engine";
+			class initEngineState     {};
+			class engineLoop          {};
+			class onEngineTick        {};
+
+			class engineSetHeatEffect {};
+			class engineAddTemp       {};
+			class engineLowerTemp     {};
+
+			class engineAddLoad       {};
+			class onInventoryOpened   {};
+			class showEngineState     {};
+
+			class setEngineFuel        {};
+			class setFuelStateGlobal   {};
+			class reduceFuelVirtual    {};
+			class syncVirtualFuelState {};
+			class reduceFuelPhysical   {};
+			class setBackpackMagOrFuel {};
+			class getPhysicalFuelState {};
+		}
 
 		class effects 
 		{

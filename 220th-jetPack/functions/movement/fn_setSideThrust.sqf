@@ -1,3 +1,6 @@
+params [
+	["_engineState", nil,[createHashmap]]
+];
 private _man           = player;
 private _velocity      = velocityModelSpace _man;
 private _drift         = _velocity#0;
@@ -18,5 +21,6 @@ if(_left)then{_newDrift = _drift-RJET_driftChange;};
 
 _man setVelocityModelSpace [_newDrift, _velocity#1, _velocity#2];
 [_man] call RJET_fnc_liftSmoke;
+_engineState call ["addLoad", 1];
 
 true;

@@ -3,7 +3,7 @@ class CfgPatches {
 		author = RevanHilts;
 		name = "220th_Jetpack"; 
 		requiredVersion = 2.0;
-		requiredAddons[] = {};
+		requiredAddons[] = {"tgf_backpacks", "tgf_helmets"};
 		units[] = {};
 	};
 };
