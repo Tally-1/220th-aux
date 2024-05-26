@@ -1,1 +1,0 @@
-if!(_self call ["isOverHeating"])exitWith{};

@@ -1,7 +1,7 @@
 []spawn{
 waitUntil { (!isNull (findDisplay 46))&&{isTouchingGround player}};
 isNil{ 
-
+RJET_AceLoaded      = isClass (configFile >> "CfgPatches" >> "ace_common");
 RJET_EngineCycle    = 0.1;
 RJET_maxLift        = 15;
 RJET_liftIncrease   = 2;
@@ -16,6 +16,16 @@ RJET_driftChange    = 2;
 
 RJET_maxAltitude    = 200;
 RJET_maxTemp        = 1000;
+
+RJET_CookOffSounds = [];
+
+if(RJET_AceLoaded)then{
+	RJET_CookOffSounds = [
+		"ace_cookoff_shotbullet_close_1",
+		"ace_cookoff_shotbullet_close_2",
+		"ace_cookoff_shotbullet_close_3"
+	];
+};
 
 (findDisplay 46) displayAddEventHandler 
 ["KeyUp",

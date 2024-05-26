@@ -18,6 +18,8 @@ class CfgFunctions
 			class setAnimationHandler    {};
 			class removeAnimationHandler {};
 
+			class jetPackExplode         {};
+
 		};
 
 		class math 
@@ -49,25 +51,29 @@ class CfgFunctions
 		class engine
 		{
 			file = "\220th-jetpack\Functions\engine";
-			class initEngineState     {};
-			class engineLoop          {};
-			class onEngineTick        {};
+			class initEngineState       {};
+			class engineLoop            {};
+			class onEngineTick          {};
+			class resetEngineCycle      {};
 
-			class engineSetHeatEffect {};
-			class engineAddTemp       {};
-			class engineLowerTemp     {};
+			class engineAddTemp         {};
+			class engineLowerTemp       {};
+			class engineOverHeatEffect  {};
+			class overHeatExplode       {};
 
-			class engineAddLoad       {};
-			class onInventoryOpened   {};
-			class showEngineState     {};
+			class engineAddLoad         {};
+			class onInventoryOpened     {};
+			class showEngineState       {};
 
-			class setEngineFuel        {};
-			class setFuelStateGlobal   {};
-			class reduceFuelVirtual    {};
-			class syncVirtualFuelState {};
-			class reduceFuelPhysical   {};
-			class setBackpackMagOrFuel {};
-			class getPhysicalFuelState {};
+			class setEngineFuel         {};
+			class setFuelStateGlobal    {};
+			class reduceFuelVirtual     {};
+			class syncVirtualFuelState  {};
+			class reduceFuelPhysical    {};
+			class setBackpackMagOrFuel  {};
+			class getPhysicalFuelState  {};
+			class lowFuelEffects        {};
+			class noFuelEffect          {};
 		}
 
 		class effects 

@@ -13,9 +13,7 @@ _state call ["setTemp"];
 _state call ["setFuel",[_man]];
 _state call ["showState"];
 
-if(_state get "fuel" <= 0)then{
-	[] call RJET_fnc_switchOff;
-	hint "No more fuel";
-};
+_state call ["lowFuelEffects"];
+_state call ["heatEffect"];
 
 true;

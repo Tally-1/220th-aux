@@ -22,7 +22,7 @@ class 200TH_FusionCell_6000: 200TH_FusionCell_Base
 {
 	scope            = 2;
 	displayName      = "[AFCP] 6000 E-U";
-	descriptionShort = "Atomic Fusion Cell Pack \n 6000 Energy units";
+	descriptionShort = "Atomic Fusion Cell Pack<br />6000 Energy units";
 	count            = 6000;
 	mass             = 150;
 };
@@ -31,7 +31,7 @@ class 200TH_FusionCell_12000: 200TH_FusionCell_Base
 {
 	scope            = 2;
 	displayName      = "[AFCP] 12000 E-U";
-	descriptionShort = "Atomic Fusion Cell Pack \n 12000 Energy units";
+	descriptionShort = "Atomic Fusion Cell Pack<br />12000 Energy units";
 	count            = 12000;
 	mass             = 250;
 	picture          = "\220TH-JETPACK\FusionCells\images\Battery_Olive.paa";
@@ -45,7 +45,7 @@ class 200TH_FusionCell_18000: 200TH_FusionCell_Base
 {
 	scope            = 2;
 	displayName      = "[AFCP] 18000 E-U";
-	descriptionShort = "Atomic Fusion Cell Pack \n 18000 Energy units";
+	descriptionShort = "Atomic Fusion Cell Pack<br />18000 Energy units";
 	count            = 18000;
 	mass             = 300;
 	picture          = "\220TH-JETPACK\FusionCells\images\Battery_Sand.paa";

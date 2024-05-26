@@ -2,11 +2,13 @@
 class 220th_PCA_1: 220TH_PCA_Base
 {
 	
-	scope             = 2;
-	displayname       = "[220th]PCA Helmet";
-	descriptionShort  = "Helmet & Personal Combat Assistant";
-	model             = "\z\tgf\addons\helmets\pilot\pilot_helmet.p3d";
-	picture           = "\z\tgf\addons\helmets\pilot\data\pilot_helmet.paa";
+	scope                   = 2;
+	displayname             = "[220th]PCA Helmet";
+	descriptionShort        = "Personal Combat Assistant and Head protection";
+	model                   = "\z\tgf\addons\helmets\pilot\pilot_helmet.p3d";
+	picture                 = "\z\tgf\addons\helmets\pilot\data\pilot_helmet.paa";
+	ace_hearing_lowerVolume = 0;
+	ace_hearing_protection  = 0.85000002;
 	hiddenSelections[]=
 	{
 		"camo1",
@@ -37,6 +39,13 @@ class 220th_PCA_1: 220TH_PCA_Base
 				hitpointName = "HitHead";
 				armor        = 10;
 				passThrough  = 0.30000001;
+			};
+
+			class face
+			{
+				hitpointName = "HitFace";
+				armor        = 5;
+				passThrough  = 0.2;
 			};
 		};
 
