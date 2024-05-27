@@ -5,18 +5,19 @@ params [
 	["_ctrl",             nil,        [true]],
 	["_alt",              nil,        [true]]
 ];
-private _man    = player;
-private _keys   = [57, 17, 32, 30, 31];
-private _flying = !isTouchingGround _man;
+private _man             = player;
+private _keys            = [57, 17, 32, 30, 31, 45];
+private _flying          = !isTouchingGround _man;
+private _toggleAutoHover = _ctrl && {_key isEqualTo 45};
 
 if!(_key in _keys)    exitWith{false;};
-if(_key isEqualTo 57) exitWith{[player, "up"] call RJET_fnc_thrustStart; true;};
+if(_key isEqualTo 57) exitWith{[_man, "up"] call RJET_fnc_thrustStart; true;};
 if(!_flying)          exitWith{false;};
+if(_toggleAutoHover)  exitWith{true;};
 
-
-if(_key isEqualTo 17)exitWith{[player, "forward"] call RJET_fnc_thrustStart; _flying;};
-if(_key isEqualTo 32)exitWith{[player, "right"]   call RJET_fnc_thrustStart; _flying;};
-if(_key isEqualTo 30)exitWith{[player, "left"]    call RJET_fnc_thrustStart; _flying;};
-if(_key isEqualTo 31)exitWith{[player, "brake"]   call RJET_fnc_thrustStart; _flying;};
+if(_key isEqualTo 17)exitWith{[_man, "forward"] call RJET_fnc_thrustStart; _flying;};
+if(_key isEqualTo 32)exitWith{[_man, "right"]   call RJET_fnc_thrustStart; _flying;};
+if(_key isEqualTo 30)exitWith{[_man, "left"]    call RJET_fnc_thrustStart; _flying;};
+if(_key isEqualTo 31)exitWith{[_man, "brake"]   call RJET_fnc_thrustStart; _flying;};
 
 false;

@@ -2,25 +2,31 @@ params [
 	["_engineState", nil,[createHashmap]]
 ];
 private _man          = player;
+private _maxLift      = _engineState get "maxLiftSpeed";
+private _initialLift  = _engineState get "initialLift";
+private _maxAltitude  = _engineState get "maxAltitude";
 private _velocity     = velocityModelSpace _man;
 private _altitude     = (getPos _man)#2;
 private _lift         = _velocity#2;
 private _newVelocity  = [_velocity#0, _velocity#1, _lift+RJET_liftIncrease];
 
-if(_altitude >= RJET_maxAltitude) 
+if(_altitude >= _maxAltitude) 
 exitWith{
-	if((_altitude - RJET_maxAltitude) > 20)
+	if((_altitude - _maxAltitude) > 20)
 	then{_man setVelocityModelSpace [_velocity#0, _velocity#1, -50]}
 	else{_man setVelocityModelSpace [_velocity#0, _velocity#1,  0]};
 	
 	false;
 };
 
-if(_lift >= RJET_maxLift)exitWith{false;};
+if(_lift >= _maxLift)exitWith{
+	_engineState call ["addLoad", 1];
+	false;
+};
 
 if(isTouchingGround _man)
 then{
-	_newVelocity = [_velocity#0, _velocity#1, RJET_initialLift];
+	_newVelocity = [_velocity#0, _velocity#1, _initialLift];
 	[_man] spawn RJET_fnc_takeOffSmoke;
 	[_man] call RJET_fnc_takeOffSound;
 	_engineState call ["addLoad", 2]; 
@@ -28,6 +34,12 @@ then{
 
 _man setVelocityModelSpace _newVelocity;
 [_man] call RJET_fnc_liftSmoke;
-_engineState call ["addLoad", 1]; 
+
+// progressive load increase
+_engineState call ["addLoad", 1];
+
+if(_lift < -10) then{_engineState call ["addLoad", 1]};
+if(_lift < -30) then{_engineState call ["addLoad", 1]};
+if(_lift < -50) then{_engineState call ["addLoad", 1]};
 
 true;

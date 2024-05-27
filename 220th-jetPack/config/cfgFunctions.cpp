@@ -28,6 +28,7 @@ class CfgFunctions
 			class numDiff      {};
 			class invertNumber {};
 			class invertVector {};
+			class selectionPos {};
 
 		};
 
@@ -72,8 +73,16 @@ class CfgFunctions
 			class reduceFuelPhysical    {};
 			class setBackpackMagOrFuel  {};
 			class getPhysicalFuelState  {};
+
 			class lowFuelEffects        {};
 			class noFuelEffect          {};
+			class smokeColor            {};
+			class getEffectPos          {};
+
+			class autoHoverSwitch       {};
+			class initAutoHover         {};
+			class endAutoHover          {};
+			class autoHover             {};
 		}
 
 		class effects 

@@ -3,7 +3,7 @@ params [
 ];
 
 private _display    = findDisplay 46;
-private _thrustDirs = _display getVariable "RJET_activeThrusts";
+private _thrustDirs = _engineState get "thrustDirs";
 private _man        = player;
 private _velocity   = velocityModelSpace _man;
 

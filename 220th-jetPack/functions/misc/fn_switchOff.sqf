@@ -10,7 +10,6 @@ private _display      = findDisplay 46;
 private _timer        = time +1;
 private _time         = time;
 
-_display setVariable ["RJET_activeThrusts", nil];
 _man     setVariable ["RJET_engineOn",    false];
 
 

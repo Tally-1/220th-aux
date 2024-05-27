@@ -28,7 +28,6 @@ private _kEh    = _man addEventHandler ["Killed", {[] spawn RJET_fnc_switchOff}]
 private _invEh  = _man addEventHandler ["InventoryOpened", {_this spawn RJET_fnc_onInventoryOpened}];
 private _enLoop = [_man] call RJET_fnc_engineLoop;
 
-_display setVariable ["RJET_activeThrusts",         []];
 _man     setVariable ["RJET_engineLoop",       _enLoop];
 _man     setVariable ["RJET_engineState", _engineState];
 _man     setVariable ["RJET_engineTimer",            0];

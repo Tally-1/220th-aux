@@ -18,10 +18,10 @@ private _fuelCap    = _self get "fuelCapacity";
 private _cellpacks  = count (_self get "fusionPacks");
 private _engineLoad = _self get "engineLoad";
 private _maxEngineLoad = _self get "maxEngineLoad";
-
 private _isOverHeating = _self call ["isOverHeating"];
+private _autHover      = _self get "autoHoverOn";
 
-private  _text = parseText([
+private _textArr = [
 	_left,"Temperature",_end,_right,_temp,"/",_maxTemp,_end,
 	_newLine,
 	_left,"FusionCells",_end,_right,_fuel,"/",_fuelCap,_end,
@@ -44,8 +44,17 @@ private  _text = parseText([
 	_newLine,
 	_left,"Altitude",_end,_right,_altitude,_end
 
-]joinString"");
+];
 
+if(_autHover)then{
+	_textArr append [ 
+		_newLine,
+		_newLine,
+		_largeTxt,_center,"Autohover",_end,_end
+	];
+};
+
+private _text = parseText (_textArr joinString"");
 hintSilent _text;
 
 _text;

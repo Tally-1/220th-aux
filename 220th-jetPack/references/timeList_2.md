@@ -9,4 +9,8 @@
 [47m]  Sound tweaks and adjustments.
 [19m]  Overheat Explosion.
 [30m]  Code cleanup, uploading to Github.
-~14.5 hrs
+[161m] Autohover function, Balancing engine load & sounds.
+[58m]  Smoke adjustment.
+[21]   Code cleanup, uploading to Github.
+
+~18.5 hrs

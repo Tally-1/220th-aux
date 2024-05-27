@@ -7,12 +7,17 @@ private _state   = _jetPack getVariable "RJET_engineState";
 if(!isNil "_state")exitWith{
 	_state call ["setTemp"];
 	_state call ["syncFuelStateVirtual",[_man]];
+	_state set  ["autoHoverOn", false];
 	_state;
 };
 
 private _stateArr = [
 	["temp",                               0],
 	["maxTemp",                 RJET_maxTemp],
+	["maxSpeed",               RJET_maxSpeed],
+	["maxAltitude",         RJET_maxAltitude],
+	["initialLift",         RJET_initialLift],
+	["maxLiftSpeed",            RJET_maxLift],
 	["engineLoad",                         1],
 	["maxEngineLoad",                      6],
 	["fuel",                               0],
@@ -25,15 +30,29 @@ private _stateArr = [
 	["standardEngineCycle", RJET_EngineCycle],
 	["engineCycle",         RJET_EngineCycle],
 	["tempWarningTime",               time+1],
+	["thrustDirs",                        []],
+	["autoHoverOn",                    false],
 
 	
 	/****METHODS***/
-	["showState",          RJET_fnc_showEngineState],
-	["resetEngineCycle",  RJET_fnc_resetEngineCycle],
+	["showState",            RJET_fnc_showEngineState],
+	["resetEngineCycle",    RJET_fnc_resetEngineCycle],
+	["getEffectPos",            RJET_fnc_getEffectPos],
+	["getPilot", {objectParent (_self get "jetPack")}],
+
+	["idleSmoke",                  RJET_fnc_idleSmoke],
+	["smokeColor",                RJET_fnc_smokeColor],
+
+	// Autohover 
+	["autoHover",                RJET_fnc_autoHover],
+	["autoHoverSwitch",    RJET_fnc_autoHoverSwitch],
+	["initAutoHover",        RJET_fnc_initAutoHover],
+	["endAutoHover",          RJET_fnc_endAutoHover],
 
 	//load (Minimum 1)
-	["addLoad",          RJET_fnc_engineAddLoad],
-	["resetLoad", {_self set ["engineLoad", 1]}],
+	["addLoad",                                RJET_fnc_engineAddLoad],
+	["resetLoad",                       {_self set ["engineLoad", 1]}],
+	["loadCoef", {(_self get "engineLoad")/(_self get "maxEngineLoad")}],
 
 	// Temperature
 	["addTemp",                                 RJET_fnc_engineAddTemp],

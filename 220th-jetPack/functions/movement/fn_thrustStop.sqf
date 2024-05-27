@@ -2,10 +2,12 @@ params[
 	["_man", nil, [objNull]],
 	["_dir", nil,      [""]]
 ];
-private _display = findDisplay 46;
-private _thrustDirs = _display getVariable "RJET_activeThrusts";
+private _jetPack = unitBackpack _man;
+private _engineState = _jetPack getVariable "RJET_engineState";
+if(isNil "_engineState")exitWith{};
+private _thrustDirs = (_engineState get "thrustDirs");
 
 _thrustDirs deleteAt (_thrustDirs find _dir);
-_display setVariable ["RJET_activeThrusts", _thrustDirs];
+_engineState set ["thrustDirs", _thrustDirs];
 
 true;
