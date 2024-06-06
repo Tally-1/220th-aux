@@ -1,4 +1,6 @@
-private _man = player;
+params[
+	["_man", nil, [objNull]]
+];
 private _eh  =
 _man addEventHandler ["AnimStateChanged", {
 	params ["_man", "_anim"];

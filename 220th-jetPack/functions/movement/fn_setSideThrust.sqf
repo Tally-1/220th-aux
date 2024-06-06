@@ -1,7 +1,7 @@
 params [
 	["_engineState", nil,[createHashmap]]
 ];
-private _man           = player;
+private _man           = objectParent(_engineState get "jetPack");
 private _velocity      = velocityModelSpace _man;
 private _drift         = _velocity#0;
 private _altitude      = (getPos _man)#2;

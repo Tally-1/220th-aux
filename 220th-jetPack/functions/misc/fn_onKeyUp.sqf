@@ -5,10 +5,16 @@ params [
 	["_ctrl",             nil,        [true]],
 	["_alt",              nil,        [true]]
 ];
+
+private _man = call RJET_fnc_getCurrentMan;
 private _keys = [57, 17, 32, 30, 31, 45];
 if!(_key in _keys)exitWith{false;};
+if(RJET_currentPilot != _man)exitWith{
+	[RJET_currentPilot] spawn RJET_fnc_switchOff;
+	[_man] spawn RJET_fnc_switchOff;
+	true;
+};
 
-private _man             = player;
 private _jetPack         = unitBackpack _man;
 private _engineState     = _jetPack getVariable "RJET_engineState";
 private _toggleAutoHover = _ctrl && {_key isEqualTo 45};

@@ -9,7 +9,7 @@ waitUntil{
 };
 if(isNull (findDisplay 602))exitWith{};
 
-if(isTouchingGround _man)exitWith{call RJET_fnc_switchOff};
+if(isTouchingGround _man)exitWith{[_man] call RJET_fnc_switchOff};
 
 (findDisplay 602) closeDisplay 1;
 systemChat "Cannot open Inventory while flying the Jetpack";

@@ -1,7 +1,7 @@
 params [
 	["_engineState", nil,[createHashmap]]
 ];
-private _man          = player;
+private _man          = objectParent(_engineState get "jetPack");
 private _maxLift      = _engineState get "maxLiftSpeed";
 private _initialLift  = _engineState get "initialLift";
 private _maxAltitude  = _engineState get "maxAltitude";

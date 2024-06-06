@@ -1,13 +1,16 @@
+params[
+	["_man",     nil, [objNull]]
+];
 private _display = findDisplay 46;
-private _downEh  = _display getVariable "RJET_keyDown";
-private _upEh    = _display getVariable "RJET_keyUp";
+private _downEh  = _man getVariable "RJET_keyDown";
+private _upEh    = _man getVariable "RJET_keyUp";
 
-if(isNil "_downEh")exitWith{};
+if(!isNil "_downEh") then{_display displayRemoveEventHandler ["KeyDown", _downEh]};
+if(!isNil "_upEh")   then{_display displayRemoveEventHandler ["KeyUp",   _upEh]};
+if (isNil "_upEh")    exitWith{false};
 
-_display displayRemoveEventHandler ["KeyDown", _downEh];
-_display displayRemoveEventHandler ["KeyUp",   _upEh];
 
-_display setVariable ["RJET_keyDown", nil];
-_display setVariable ["RJET_keyUp",   nil];
+_man setVariable ["RJET_keyDown", nil];
+_man setVariable ["RJET_keyUp",   nil];
 
 true;

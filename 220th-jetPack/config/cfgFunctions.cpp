@@ -9,6 +9,7 @@ class CfgFunctions
 			class switch                 {};
 			class switchOn               {};
 			class switchOff              {};
+			class removeFlightVars       {};
 			
 
 			class onKeyDown              {};
@@ -18,17 +19,24 @@ class CfgFunctions
 			class setAnimationHandler    {};
 			class removeAnimationHandler {};
 
+			class addBulletExplodeEh     {};
+			class removeBulletExplodeEh  {};
 			class jetPackExplode         {};
+			class getCurrentMan          {};
 
 		};
 
 		class math 
 		{
 			file = "\220th-jetpack\Functions\math";
-			class numDiff      {};
-			class invertNumber {};
-			class invertVector {};
-			class selectionPos {};
+			class numDiff           {};
+			class invertNumber      {};
+			class invertVector      {};
+			class selectionPos      {};
+			class formatDirRanges   {};
+			class formatDir         {};
+			class inDirRange        {};
+			class isTargetBehindMan {};
 
 		};
 

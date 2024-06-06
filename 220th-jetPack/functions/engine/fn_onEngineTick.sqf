@@ -8,7 +8,7 @@ _state call ["resetLoad"];
 _state call ["autoHover"];
 
 [_state] call RJET_fnc_setThrust;
-[_man] call RJET_fnc_setEffects;
+[_man]   call RJET_fnc_setEffects;
 
 _state call ["setTemp"];
 _state call ["setFuel",[_man]];

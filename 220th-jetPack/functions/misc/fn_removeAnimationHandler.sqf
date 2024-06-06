@@ -1,4 +1,6 @@
-private _man = player;
+params[
+	["_man", nil, [objNull]]
+];
 private _eh  = _man getVariable "RJET_animHandler";
 if(isNil "_eh")exitWith{};
 

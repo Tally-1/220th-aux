@@ -4,7 +4,7 @@ params [
 
 private _display    = findDisplay 46;
 private _thrustDirs = _engineState get "thrustDirs";
-private _man        = player;
+private _man        = objectParent(_engineState get "jetPack");
 private _velocity   = velocityModelSpace _man;
 
 if(_thrustDirs isEqualTo [])exitWith{false;};
