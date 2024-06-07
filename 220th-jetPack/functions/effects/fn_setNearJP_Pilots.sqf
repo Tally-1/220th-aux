@@ -4,6 +4,7 @@ private _currentPilots = RJET_nearJP_Pilots apply {_x#0};
 private _oldPilCount   = count RJET_nearJP_Pilots-1;
 private _newPilots     = (_pos nearEntities ["caManBase", _range]) select {[_x, _currentPilots] call RJET_fnc_isNearPilot};
 private _newPilotsData = [];
+
 {
 	private _data = [_x] call RJET_fnc_getNearPilotEffectData;
 	_newPilotsData pushBack _data;
@@ -15,7 +16,7 @@ private _newPilotsData = [];
 	private _valid = { [_pilot,[],_pos,_range] call RJET_fnc_isNearPilot};
 	if(_valid isEqualTo false)then{ 
 		private _index = RJET_nearJP_Pilots findIf {_x isEqualTo _pilot};
-		RJET_nearJP_Pilots deleteAt 0;
+		RJET_nearJP_Pilots deleteAt _index;
 	};
 	
 } forEach RJET_nearJP_Pilots;
