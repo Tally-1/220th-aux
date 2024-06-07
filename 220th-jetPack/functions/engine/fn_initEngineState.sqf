@@ -74,7 +74,7 @@ private _stateArr = [
 ];
 
 _state = createHashmapObject [_stateArr];
-_jetPack setVariable ["RJET_engineState", _state];
+_jetPack setVariable ["RJET_engineState", _state, true];
 _state call ["syncFuelStateVirtual",[_man]];
 
 _state;

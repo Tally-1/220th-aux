@@ -15,10 +15,13 @@ exitWith{};
 
 private _curFuelVirtual = _self get "fuel";
 private _amountToReduce = _cellCount-_curFuelVirtual;
+private _jetPack        = _self get "jetPack";
 
 [_man, _amountToReduce] call RJET_fnc_reduceFuelPhysical;
 
 _self set  ["fuelUpdateTime", time + 3];
 _self call ["syncFuelStateVirtual",[_man]];
+
+_jetPack setVariable ["RJET_engineState", _self, true];
 
 true;
