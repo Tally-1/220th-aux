@@ -1,0 +1,1 @@
+addMissionEventHandler ["EachFrame", {call RJET_fnc_onEachFrame}];

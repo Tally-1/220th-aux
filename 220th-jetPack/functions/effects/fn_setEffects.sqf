@@ -7,7 +7,7 @@ if(isNil "_engineState")exitWith{};
 
 private _thrustDirs = _engineState get "thrustDirs";
 
-[_man] call RJET_fnc_engineSound;
+[_man] call RJET_fnc_engineSoundLocal;
 
 if(_thrustDirs isEqualTo [])
 exitWith{_engineState call ["idleSmoke"]};

@@ -33,7 +33,7 @@ private _enLoop = [_man] call RJET_fnc_engineLoop;
 _man     setVariable ["RJET_engineLoop",       _enLoop];
 _man     setVariable ["RJET_engineState", _engineState];
 _man     setVariable ["RJET_engineTimer",            0];
-_man     setVariable ["RJET_engineOn",            true];
+_man     setVariable ["RJET_engineOn",      true, true];
 _man     setVariable ["RJET_fallAlt",         _fallAlt];
 _man     setVariable ["RJET_deathEh",             _kEh];
 _man     setVariable ["RJET_invEh",             _invEh];

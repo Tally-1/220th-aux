@@ -18,6 +18,16 @@ hiddenSelectionsTextures[]=
 
 };
 
+class 200TH_FusionCell_3000: 200TH_FusionCell_Base
+{
+	scope            = 2;
+	displayName      = "[AFCP] 3000 E-U";
+	descriptionShort = "Atomic Fusion Cell Pack<br />3000 Energy units";
+	count            = 3000;
+	mass             = 90;
+};
+
+
 class 200TH_FusionCell_6000: 200TH_FusionCell_Base
 {
 	scope            = 2;

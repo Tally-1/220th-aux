@@ -10,6 +10,8 @@ class CfgFunctions
 			class switchOn               {};
 			class switchOff              {};
 			class removeFlightVars       {};
+			class hasJetpack             {};
+			class hasActiveJetpack       {};
 			
 
 			class onKeyDown              {};
@@ -43,7 +45,26 @@ class CfgFunctions
 		class init 
 		{
 			file = "\220th-jetpack\Functions\init";
-			class initRJET {postInit = 1;};
+			class initRJET      {postInit = 1;};
+			class clientInit    {};
+			class setGlobalVars {};
+			class setClientVars {};
+		};
+
+		class taskManager 
+		{
+			file = "\220th-jetpack\Functions\taskManager";
+			class frameLoop                 {};
+			class onEachFrame               {};
+			class execPrFrameTasks          {};
+			class execPrSecondTasks         {};
+			class execPr_5_SecondTasks      {};
+			class addClientFrameTask        {};
+			class addClientSecondTask       {};
+			class addClient_5_SecondTask    {};
+			class removeClientFrameTask     {};
+			class removeClientSecondTask    {};
+			class removeClient_5_SecondTask {};
 		};
 
 		class movement 
@@ -96,17 +117,26 @@ class CfgFunctions
 		class effects 
 		{
 			file = "\220th-jetpack\Functions\effects";
-			class setEffects   {};
-
-			class takeOffSound {};
-			class engineSound  {};
-			class brakeSound   {};
+			class setEffects           {};
+			class takeOffSound         {};
+			class engineSound          {};
+			class engineSoundLocal     {};
+			class brakeSound           {};
+			class toggleAllEngineSound {};
 			
 			class brakingSmoke {};
 			class takeOffSmoke {};
 			class liftSmoke    {};
 			class idleSmoke    {};
 			class smokeBall    {};
+			class engineSmokeNearMan {};
+
+			class playNearJPEffects      {};
+			class nearManJPeffects       {};
+			class setNearJP_Pilots       {};
+			class getNearPilotEffectData {};
+			class isNearPilot            {};
+
 
 
 		};
