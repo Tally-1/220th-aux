@@ -1,8 +1,11 @@
 /*
 	This is the "fast" jetpack, I've tried to balance it by:
+		+ Insanely fast and manouverable
 		- Low load capacity
 		- High fuel consumption
 		- Unstable engine (Explodes with almost no warning)
+		- Unstable landings due to high engine power
+		- Autohover heats the engine extremely quickly
 */
 
 // All jetpack-classNames need to start with "220th_Jetpack", if not the engine will not recognize it as a jetpack.
@@ -26,7 +29,7 @@ class 220th_Jetpack_Speeder:220th_Jetpack_Base
 	// These ones should be self explanatory
 	maxTemperature   = 1200;
 	maxAltitude      = 300;
-	maxSpeed         = 500;
+	maxSpeed         = 500; // This is just the top limit, with this jetpack I could not pass 420kmH so the 500 limit is redundant.
 
 	// New skin.
     hiddenSelectionsTextures[]=
