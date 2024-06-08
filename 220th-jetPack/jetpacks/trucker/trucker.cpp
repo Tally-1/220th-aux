@@ -18,7 +18,7 @@ class 220th_Jetpack_Trucker:220th_Jetpack_Base
 	engineCycleSpeed  = 0.5; 
 	enginePower       = 1.2; 
 	liftPower         = 1.6; 
-	brakePower        = 1.5;   
+	brakePower        = 1.2;   
 	fuelConsumption   = 2.5; 
 
 	maxTemperature   = 900;
