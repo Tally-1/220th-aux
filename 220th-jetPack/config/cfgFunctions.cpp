@@ -25,6 +25,7 @@ class CfgFunctions
 			class removeBulletExplodeEh  {};
 			class jetPackExplode         {};
 			class getCurrentMan          {};
+			class forceGlobalVarValue    {};
 
 		};
 
@@ -49,6 +50,7 @@ class CfgFunctions
 			class clientInit    {};
 			class setGlobalVars {};
 			class setClientVars {};
+			class jetPackInit   {};
 		};
 
 		class taskManager 
@@ -81,6 +83,7 @@ class CfgFunctions
 		class engine
 		{
 			file = "\220th-jetpack\Functions\engine";
+			class addJPconfigSettings   {};
 			class initEngineState       {};
 			class engineLoop            {};
 			class onEngineTick          {};

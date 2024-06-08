@@ -11,15 +11,12 @@ if(!isNil "_state")exitWith{
 	_state;
 };
 
-private _stateArr = [
-	["temp",                               0],
-	["maxTemp",                 RJET_maxTemp],
-	["maxSpeed",               RJET_maxSpeed],
-	["maxAltitude",         RJET_maxAltitude],
-	["initialLift",         RJET_initialLift],
-	["maxLiftSpeed",            RJET_maxLift],
+
+private _stateArr = [ 
+	/*GENERAL DATA:*/
 	["engineLoad",                         1],
 	["maxEngineLoad",                      6],
+	["temp",                               0],
 	["fuel",                               0],
 	["fuelCapacity",                       0],
 	["fusionPacks",                        0],
@@ -27,8 +24,6 @@ private _stateArr = [
 	["fuelUpdateTime",              time + 3],
 	["jetPack",                     _jetPack],
 	["prevTempLower",                    0.1],
-	["standardEngineCycle", RJET_EngineCycle],
-	["engineCycle",         RJET_EngineCycle],
 	["tempWarningTime",               time+1],
 	["thrustDirs",                        []],
 	["autoHoverOn",                    false],
@@ -74,7 +69,10 @@ private _stateArr = [
 ];
 
 _state = createHashmapObject [_stateArr];
-_jetPack setVariable ["RJET_engineState", _state, true];
+[_jetPack, _state] call RJET_fnc_addJPconfigSettings;
+
 _state call ["syncFuelStateVirtual",[_man]];
+
+_jetPack setVariable ["RJET_engineState", _state, true];
 
 _state;

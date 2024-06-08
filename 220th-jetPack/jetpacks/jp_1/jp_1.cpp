@@ -1,18 +1,19 @@
-class 220th_Jetpack_1:tgf_backpacks_JT12_LR
-{
-        
-    displayName      = "[220th] Jetpack 0.1";
-    descriptionShort = "Jetpack<br/>Fueled by Atomic Fusion Cells.<br/>Make sure you carry minimum one ''[AFCP] 6000 E-U'' with remaining energy.";
-    picture          = "\z\tgf\addons\backpacks\jt12\data\JT12.paa";
-    maximumload      = 300;
-    init             = "systemChat str ['JP_1 init',_this];";
+/*
+This jetpack is the vanilla jetPack inheriting all values from the base Jetpack.
+The only changes made is:
+    -> Setting the scope to 2 (Makes it available ingame)
+    -> A new displayName (The name seen in the inventory and arsenal)
 
-    hiddenSelections[]=
-	{
-	    "camo1"
-	};	
-    hiddenSelectionsTextures[]=
-	{
-		"\220TH-JETPACK\jetpacks\jp_1\textures\camo1_co[220th].paa"
-	};
+Look at the config for the "speeder" jetpack for an example of how the jetpacks can be tweaked.
+*/
+
+// All jetpack-classNames need to start with "220th_Jetpack", if not the engine will not recognize it as a jetpack.
+// All new jetpacks must inherit from the base jetpack.
+// EXAMPLE:
+//       New name            parent class
+// class 220th_Jetpack_NewJP:220th_Jetpack_Base {};
+class 220th_Jetpack_1:220th_Jetpack_Base
+{
+    scope         = 2; // Very important! if not set to 2 the jetpack is not available ingame.
+    displayName   = "[220th] Jetpack 0.1";
 };

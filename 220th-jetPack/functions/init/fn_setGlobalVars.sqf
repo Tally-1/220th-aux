@@ -12,7 +12,7 @@ RJET_speedDecrease    = 2;
 RJET_maxDrift         = 50;
 RJET_driftChange      = 2;
 
-RJET_maxAltitude      = 200;
+RJET_maxAltitude      = 150;
 RJET_tempReductionSec = 30;
 RJET_maxTemp          = 1000;
 RJET_enginesMuted     = true;

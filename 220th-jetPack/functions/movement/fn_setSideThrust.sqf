@@ -9,6 +9,7 @@ private _driftingLeft  = _drift<0;
 private _thrustDirs    = _engineState get "thrustDirs";
 private _right         = "right" in _thrustDirs;
 private _left          = "left"  in _thrustDirs;
+private _driftChange   = RJET_driftChange*(_engineState get "enginePower");
 private _maxLeftSpeed  = 0-RJET_maxDrift;
 private _maxRightSpeed = RJET_maxDrift;
 

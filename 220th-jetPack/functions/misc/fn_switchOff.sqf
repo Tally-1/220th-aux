@@ -9,18 +9,15 @@ private _time         = time;
 private _jetPack      = unitBackpack _man;
 private _engineState  = _jetPack getVariable "RJET_engineState";
 
-
 [_man] call RJET_fnc_removeKeyHandler;
 [_man] call RJET_fnc_removeFlightVars;
 [_man] call RJET_fnc_removeAnimationHandler;
 [_man] remoteExecCall ["RJET_fnc_removeBulletExplodeEh", 0];
-_man setVariable ["RJET_engineOn", false, true];
 
-if([_man] call RJET_fnc_hasJetpack
-&&{(!isNull _jetPack)
-&&{(!isNil "_engineState")
-}})then{
-	_jetPack setVariable ["RJET_engineState", _engineState, true];
+if([_man] call RJET_fnc_hasJetpack)
+then{
+	[_jetPack,"RJET_engineState",_engineState]call RJET_fnc_forceGlobalVarValue;
+	[_man,"RJET_engineOn",false]call RJET_fnc_forceGlobalVarValue;
 };
 
 if(_restart)

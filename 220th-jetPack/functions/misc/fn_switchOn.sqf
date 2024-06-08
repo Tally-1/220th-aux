@@ -34,18 +34,18 @@ private _enLoop = [_man] call RJET_fnc_engineLoop;
 _man     setVariable ["RJET_engineLoop",             _enLoop];
 _man     setVariable ["RJET_engineState", _engineState, true];
 _man     setVariable ["RJET_engineTimer",                  0];
-_man     setVariable ["RJET_engineOn",            true, true];
 _man     setVariable ["RJET_fallAlt",               _fallAlt];
 _man     setVariable ["RJET_deathEh",                   _kEh];
 _man     setVariable ["RJET_invEh",                   _invEh];
 
+[_jetPack,"RJET_engineState",_engineState]call RJET_fnc_forceGlobalVarValue;
+[_man,"RJET_engineOn",true]call RJET_fnc_forceGlobalVarValue;
 [_man] call RJET_fnc_setKeyHandler;
 [_man] call RJET_fnc_setAnimationHandler;
 
 _man setUnitFreefallHeight (RJET_maxAltitude+200);
 
 [_man] remoteExecCall ["RJET_fnc_addBulletExplodeEh", 0];
-_jetPack setVariable ["RJET_engineState", _engineState, true];
 
 RJET_currentPilot = _man;
 

@@ -10,7 +10,7 @@ if(_lift<0)then{
 	[_man] call RJET_fnc_brakeSound;
 };
 
-playSoundUI ["click", 0.5, 1];
+playSoundUI ["click", 1, 1];
 _self set ["autoHoverOn", true];
 
 true;

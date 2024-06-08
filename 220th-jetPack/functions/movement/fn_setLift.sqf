@@ -5,10 +5,11 @@ private _man          = objectParent(_engineState get "jetPack");
 private _maxLift      = _engineState get "maxLiftSpeed";
 private _initialLift  = _engineState get "initialLift";
 private _maxAltitude  = _engineState get "maxAltitude";
+private _accUp        = _engineState get "accelerationUp";
 private _velocity     = velocityModelSpace _man;
 private _altitude     = (getPos _man)#2;
 private _lift         = _velocity#2;
-private _newVelocity  = [_velocity#0, _velocity#1, _lift+RJET_liftIncrease];
+private _newVelocity  = [_velocity#0, _velocity#1, _lift+_accUp];
 
 if(_altitude >= _maxAltitude) 
 exitWith{

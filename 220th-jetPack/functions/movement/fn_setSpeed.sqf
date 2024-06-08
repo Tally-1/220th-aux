@@ -9,6 +9,8 @@ private _drift       = _velocity#0;
 private _lift        = _velocity#2;
 private _maxSpeed    = _engineState get "maxSpeed";
 private _maxAltitude = _engineState get "maxAltitude";
+private _brakePower  = _engineState get "brakePower";
+private _acc         = _engineState get "acceleration";
 private _driftSpeed  = [0, _drift] call RJET_fnc_numDiff;
 private _thrustDirs  = _engineState get "thrustDirs";
 private _forward     = "forward" in _thrustDirs;
@@ -32,16 +34,16 @@ if(_brake
 exitWith{false;};
 
 
-private _newSpeed     = _speed + RJET_speedIncrease;
+private _newSpeed     = _speed + _acc;
 private _driftingLeft = _drift < 0;
-private _newDrift     = _drift - RJET_speedDecrease;
-private _newLift      = _lift  + RJET_speedDecrease;
+private _newDrift     = _drift - _brakePower;
+private _newLift      = _lift  + _brakePower;
 
-if(_driftingLeft)             then {_newDrift = _drift + RJET_speedDecrease;};
+if(_driftingLeft)             then {_newDrift = _drift + _brakePower;};
 if(_brake)                    then {
-	_newSpeed = _speed - RJET_speedDecrease;
+	_newSpeed = _speed - _brakePower;
 	_drift    = _newDrift;
-	if(_newSpeed < 0)then{_newSpeed = 0;};
+	if(_newSpeed < 0)then{_newSpeed = _speed+_brakePower;};
 
 	if(_lift < -3)
 	then{
@@ -66,6 +68,7 @@ else{
 	if(_speed < -6)   then{_engineState call ["addLoad", 1]};
 	if(_speed < -30)  then{_engineState call ["addLoad", 1]};
 	if(_speed < -50)  then{_engineState call ["addLoad", 1]};
+	if(_speed < -80)  then{_engineState call ["addLoad", 1]};
 };
 
 _man setVelocityModelSpace _newVelocity;
