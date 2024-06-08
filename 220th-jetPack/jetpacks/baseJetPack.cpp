@@ -13,7 +13,7 @@ class 220th_Jetpack_Base:tgf_backpacks_JT12_LR
 {
     scope            = 1; // Scope = 1; --> Set to 2 to make the jetpack available ingame, 1 is only to set up base settings here. 
     displayName      = "[220th] JP base"; // ingame name
-    descriptionShort = "Jetpack<br/>Fueled by Atomic Fusion Cells.<br/>Make sure you carry minimum one ''[AFCP] 6000 E-U'' with remaining energy.";
+    descriptionShort = "Jetpack<br />Fueled by Atomic Fusion Cells.<br />Make sure you carry minimum one ''[AFCP] 3000 E-U'' with remaining energy.";
     picture          = "\z\tgf\addons\backpacks\jt12\data\JT12.paa"; // Inventory image
     maximumload      = 300; // a value representing how much inventory can be carried inside the jetpack
 
@@ -37,7 +37,8 @@ class 220th_Jetpack_Base:tgf_backpacks_JT12_LR
     maxAltitude      = 120;  // meters over the ground
     maxSpeed         = 220;  // Km pr hour. Works as a speedlimit, just because it is set to 220 does not mean the jetpack will reach that speed.
                              // The REAL maximum speed depends on the engineCycle & enginePower.
-                             // For referance the max speed of a little bird is roughly 250 kmh
+                             // For referance the max speed of a little bird is roughly 250 kmh.
+                             // With no speedlimit the default settings here would give the jetpack roughly 320 Kmh max speed
 
 
     hiddenSelections[]=

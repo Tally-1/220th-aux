@@ -15,6 +15,7 @@ class 220th_Jetpack_Speeder:220th_Jetpack_Base
     scope            = 2;                     // Makes it available ingame.
     displayName      = "[220th] Speeder 0.1"; // Ingame name
 	maximumload      = 150;                   // enough to carry 1 medium-small size cellpack (6000 cells)
+	descriptionShort = "Jetpack<br />Fueled by Atomic Fusion Cells. ([AFC] ammo)<br />    + Insanely fast and manouverable<br />    - Low load capacity<br />    - High fuel consumption<br />    - Unstable engine (Explodes with almost no warning)<br />    - Unstable landings due to high engine power<br />    - Autohover heats the engine extremely quickly";
 
 	cooling           = 1.4; // Will cool down the engine 40% faster (needed because of the other settings below)
 	overHeatTolerance = 0.05;// at 5% over max-temp the engine is in danger of exploding

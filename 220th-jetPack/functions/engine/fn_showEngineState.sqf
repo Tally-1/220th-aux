@@ -1,4 +1,4 @@
-private _newLine  = "<br/>";
+private _newLine  = "<br />";
 private _right    = "<t align='right'>";
 private _left     = "<t align='left'>";
 private _center   = "<t align='center'>";
