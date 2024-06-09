@@ -10,7 +10,7 @@ private _shake      = (_engine call ["loadCoef"])>=1
 					&&{_engine get "autoHoverOn" isEqualTo false};
 
 if(_shake)
-then{addCamShake [10, 0.1, 50]};
+then{addCamShake [10, 0.1, 100]};
 
 [_man] call RJET_fnc_engineSoundLocal;
 

@@ -26,14 +26,7 @@ if(!isNil "_smoke")then{
 	_man setVariable ["RJET_smoke",nil];
 };
 
-if(!isNil "_engineState")then{ 
-	private _jetPack = _engineState get "jetPack";
-	
-	_jetPack setVariable ["RJET_engineState", _engineState, true];
-	_engineState call    ["setFuelPhysical",[_man, true]];
-
-	_man setVariable ["RJET_engineState",nil];
-};
+if(!isNil "_engineState")then{_man setVariable ["RJET_engineState",nil]};
 
 if(!isNil "_enLoop")then{
 	removeMissionEventHandler ["eachFrame",_enLoop];
