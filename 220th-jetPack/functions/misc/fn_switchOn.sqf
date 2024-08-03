@@ -40,7 +40,7 @@ _man     setVariable ["RJET_invEh",                   _invEh];
 
 [_jetPack,"RJET_engineState",_engineState]call RJET_fnc_forceGlobalVarValue;
 [_man,"RJET_engineOn",true]call RJET_fnc_forceGlobalVarValue;
-[_man] call RJET_fnc_setKeyHandler;
+// [_man] call RJET_fnc_setKeyHandler;
 [_man] call RJET_fnc_setAnimationHandler;
 
 _man setUnitFreefallHeight (RJET_maxAltitude+200);

@@ -3,3 +3,4 @@
 #include "config\cfgVehicles.cpp"
 #include "config\cfgWeapons.cpp"
 #include "config\cfgMagazines.cpp"
+#include "config\preInitEvents.cpp"

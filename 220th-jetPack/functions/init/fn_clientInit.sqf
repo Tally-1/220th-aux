@@ -15,7 +15,7 @@ call RJET_fnc_frameLoop;
 [[],{call RJET_fnc_playNearJPEffects}] call RJET_fnc_addClientFrameTask;
 
 
-
+if(true)exitWith{};
 // Key EH, to be replaced with addon options
 (findDisplay 46) displayAddEventHandler 
 ["KeyUp",

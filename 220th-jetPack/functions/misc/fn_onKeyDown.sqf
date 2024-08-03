@@ -13,7 +13,6 @@ private _toggleAutoHover = _ctrl && {_key isEqualTo 45};
 if!(_key in _keys)           exitWith{false};
 if(RJET_currentPilot != _man)exitWith{
 	[RJET_currentPilot] spawn RJET_fnc_switchOff;
-	// [_man] call RJET_fnc_switchOn;
 	[_man] spawn RJET_fnc_switchOff;
 	true;
 };

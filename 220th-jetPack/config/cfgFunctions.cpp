@@ -27,6 +27,9 @@ class CfgFunctions
 			class getCurrentMan          {};
 			class forceGlobalVarValue    {};
 
+			class actionKeyDown          {};
+			class actionKeyUp            {};
+
 		};
 
 		class math 
@@ -139,9 +142,78 @@ class CfgFunctions
 			class setNearJP_Pilots       {};
 			class getNearPilotEffectData {};
 			class isNearPilot            {};
+		};
 
+		class GUI 
+		{
+			file = "\220th-jetpack\Functions\GUI";
+			class RGBtoA3color                {};
+			class jetpackHudFrameUpdate       {};
+			class engineTickUpdateHUD         {};
 
+			class initHudWheel                {};
+			class hudWheelEnigneUpdate        {};
+			class hudWheelSpeedSpin           {};
+			class hudWheelEnigneSpin          {};
+			
+			class setHudData                  {};
+			class initHudNoticeBox            {};
+			class initHudElements             {};
+			class initHud                     {};
+
+			class initHudBars                 {};
+			class hudUpdateLoadBar            {};
+			class hudUpdateTempBar            {};
+			class hudUpdateFuelBar            {};
+
+			class initHudVelocityMeter        {};
+			class updateHudVelocityMeter      {};
+			class setHudVelocityPos           {};
+
+			class initHudAltimeter            {};
+			class updateHudAltimeter          {};
+			class hudAltimeterSetText         {};
+			class hudAltimeterSetIndicatorPos {};
+			class hudAltimeterRotateArrows    {};
+			class hudAltimeterSetArrows       {};
+			
+			class initHudBackground           {};
+			class canUpdateHud                {};
+
+			class setHudVBoxTexture           {};
+			class setHudVBoxFrameColor        {};
+			class initHudVideoBox             {};
 
 		};
+
+		class GUI_framework 
+		{ 
+			file = "\220th-jetpack\Functions\GUI\framework";
+			class initHudDisplay            {};
+			class initDisplayData           {};
+			class imgCtrlSetText            {};
+			class setCtrlStructuredText     {};
+			class oopCtrlSetPos             {};
+			class oopCtrlSetPosSafeSquare   {};
+			class oopCtrlGetPosSafe         {};
+			class oopCtrlSetPosSafe         {};
+			class setTextBoxBackgroundColor {};
+			class displayAddTextBox         {};
+			class displayAddCtrl            {};
+			class displayAddImageCtrl       {};
+			class imgCtrlGetAngle           {};
+			class imgCtrlSetAngle           {};
+			class formatPosCenterSquare     {};
+			class textTexture               {};
+			class getCtrlSafePos            {};
+			class setCtrlSafePos            {};
+			class displayAddProgressBarV    {};
+			class setProgressOnBar          {};
+			class setProgressBarTitle       {};
+			class setProgressBarFrameColor  {};
+			class setProgressBarFillColor   {};
+			class setProgressBarTitleColor  {};
+		};
+
 	};
 };

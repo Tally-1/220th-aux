@@ -16,10 +16,12 @@ private _maxTemp    = _self get "maxTemp";
 private _fuel       = _self get "fuel";
 private _fuelCap    = _self get "fuelCapacity";
 private _cellpacks  = count (_self get "fusionPacks");
-private _engineLoad = _self get "engineLoad";
+
+private _engineLoad    = _self get "engineLoad";
 private _maxEngineLoad = _self get "maxEngineLoad";
 private _isOverHeating = _self call ["isOverHeating"];
 private _autHover      = _self get "autoHoverOn";
+private _maxAltitude   = _self get "maxAltitude";
 
 private _textArr = [
 	_left,"Temperature",_end,_right,_temp,"/",_maxTemp,_end,
@@ -42,7 +44,7 @@ private _textArr = [
 	_newLine,
 	"-------------------------",
 	_newLine,
-	_left,"Altitude",_end,_right,_altitude,_end
+	_left,"Altitude",_end,_right,_altitude,"/",_maxAltitude,_end
 
 ];
 
