@@ -32,3 +32,5 @@
 ~1 821 minutes (30.3 hours)
 
 [74m]  Missile Cam (For the HUD only)
+[19m]  Packing mod, updating functions library, uploading to github.
+~1 913 minutes (31.8 hours)
