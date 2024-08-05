@@ -26,4 +26,10 @@ if(RJET_AceLoaded)then{
 	];
 };
 
+private _alpha = 0.8;
+PCA_edgeColor set [3,_alpha];
+PCA_iconColor set [3,_alpha];
+PCA_textColor set [3,     1];
+
+true;
 };

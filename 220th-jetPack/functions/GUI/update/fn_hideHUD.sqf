@@ -1,0 +1,1 @@
+_self call ["hideDisplay"];

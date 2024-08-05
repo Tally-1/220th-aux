@@ -9,20 +9,31 @@ private _imgCtrl        = (toLower _type) isEqualTo "rscpicture";
 private _structuredText = (toLower _type) isEqualTo "rscstructuredtext";
 private _textAction     = "setText";
 private _colorAction    = "setTextColor";
-private _setTextCode    = {params["_txt"];(_self get "ctrl")ctrlSetText _txt};
+private _setTextCode    = RJET_fnc_setCtrlStandardText;
 private _ratio          = (getResolution#1)/(getResolution#0);
+private _hidden         = _show isEqualTo false;
+private _typeName       = _type;
 
-if(_structuredText)
-then{_setTextCode = RJET_fnc_setCtrlStructuredText};
+if(_structuredText)then{ 
+	_typeName = "structuredText";
+	_setTextCode = RJET_fnc_setCtrlStructuredText;
+};
 
 if(_imgCtrl)then{
+	_typeName    = "image";
 	_textAction  = "setImage";
 	_colorAction = "setColor";
 };
 
 private _dataArr = [
 	["ctrl",                                                           _ctrl],
+	["type",                                                       _typeName],
+	["hidden",                                                       _hidden],
 	["ratio",                                                         _ratio],
+
+	//                          {METHODS}
+	["hide",                                               RJET_fnc_hideCtrl],
+	["show",                                               RJET_fnc_showCtrl],
 	["setPosGrid",                                    RJET_fnc_oopCtrlSetPos],
 	["setPos",                                    RJET_fnc_oopCtrlSetPosSafe],
 	["setPosSqr",                           RJET_fnc_oopCtrlSetPosSafeSquare],
@@ -35,8 +46,10 @@ private _data = createHashmapObject [_dataArr];
 
 _data call ["setPos", [_pos]];
 
-(_self get "controls")pushBackUnique _ctrl;
 _ctrl setVariable ["data", _data];
+
+(_self get "controls") pushBackUnique _ctrl;
+
 _ctrl ctrlShow _show;
 
 _data;

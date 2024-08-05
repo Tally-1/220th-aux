@@ -11,8 +11,9 @@ waitUntil {
 isNil{ 
 call RJET_fnc_setClientVars;
 call RJET_fnc_frameLoop;
-[[],{call RJET_fnc_setNearJP_Pilots}] call RJET_fnc_addClient_5_SecondTask;
+[[],{call RJET_fnc_setNearJP_Pilots}]  call RJET_fnc_addClient_5_SecondTask;
 [[],{call RJET_fnc_playNearJPEffects}] call RJET_fnc_addClientFrameTask;
+[[],{call RJET_fnc_enableHudIfPCA}]    call RJET_fnc_addClientSecondTask;
 
 
 if(true)exitWith{};

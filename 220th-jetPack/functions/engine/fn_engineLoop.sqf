@@ -15,9 +15,6 @@ addMissionEventHandler ["EachFrame", {
 
 	if!(_engineOn)exitWith{};
 
-	if(RJET_canUpdateHud)
-	then{[RJET_PilotLocal] call RJET_fnc_jetpackHudFrameUpdate};
-
 	if(_timer <= time)then{
 		[RJET_PilotLocal] call RJET_fnc_onEngineTick;
 		RJET_PilotLocal setVariable ["RJET_engineTimer",time+_delay];

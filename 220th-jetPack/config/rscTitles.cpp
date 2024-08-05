@@ -18,10 +18,9 @@ class RscTitles
 		fadein           = 0;
 		fadeout          = 0;
 		duration         = 10000;
-		onLoad           = "with uiNameSpace do { PCA_HUD = _this select 0 }";
-		onUnLoad         = "with uiNameSpace do { PCA_HUD = displayNull }";
+		onLoad           = "_this call RJET_fnc_initPcaHud";
+		onUnLoad         = "_this call RJET_fnc_onHudDisplayClosed";
 
 		class Controls{};
 	};
-	
 };

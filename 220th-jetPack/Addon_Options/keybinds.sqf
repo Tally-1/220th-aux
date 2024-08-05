@@ -1,5 +1,5 @@
 [
-	[_categoryName, _subCategory_Keybinds],
+	[_category, _subCategory_Keybinds],
 	"toggle_engine",
 	"Switch engine on/off",
 	{call RJET_fnc_switch},
@@ -9,7 +9,7 @@
 ] call CBA_fnc_addKeybind;
 
 [
-	[_categoryName, _subCategory_Keybinds],
+	[_category, _subCategory_Keybinds],
 	"RJET_thrustUp",
 	"Thrust up / Take off",
 	{["up"] call RJET_fnc_actionKeyDown},
@@ -19,7 +19,7 @@
 ] call CBA_fnc_addKeybind;
 
 [
-	[_categoryName, _subCategory_Keybinds],
+	[_category, _subCategory_Keybinds],
 	"RJET_brake",
 	"Brake",
 	{["brake"] call RJET_fnc_actionKeyDown},
@@ -28,7 +28,7 @@
 ] call CBA_fnc_addKeybind;
 
 [
-	[_categoryName, _subCategory_Keybinds],
+	[_category, _subCategory_Keybinds],
 	"RJET_autohover",
 	"Autohover",
 	{["autohover"] call RJET_fnc_actionKeyDown},
@@ -37,7 +37,7 @@
 ] call CBA_fnc_addKeybind;
 
 [
-	[_categoryName, _subCategory_Keybinds],
+	[_category, _subCategory_Keybinds],
 	"RJET_thrustForward",
 	"Thrust forward",
 	{["forward"] call RJET_fnc_actionKeyDown},
@@ -46,7 +46,7 @@
 ] call CBA_fnc_addKeybind;
 
 [
-	[_categoryName, _subCategory_Keybinds],
+	[_category, _subCategory_Keybinds],
 	"RJET_thrustRight",
 	"Thrust right",
 	{["right"] call RJET_fnc_actionKeyDown},
@@ -55,7 +55,7 @@
 ] call CBA_fnc_addKeybind;
 
 [
-	[_categoryName, _subCategory_Keybinds],
+	[_category, _subCategory_Keybinds],
 	"RJET_thrustLeft",
 	"Thrust left",
 	{["left"] call RJET_fnc_actionKeyDown},

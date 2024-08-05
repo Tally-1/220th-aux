@@ -14,6 +14,7 @@ if(!isNil "_state")exitWith{
 
 private _stateArr = [ 
 	/*GENERAL DATA:*/
+	// ["name",          ],
 	["engineLoad",                         1],
 	["maxEngineLoad",                      6],
 	["temp",                               0],
@@ -31,6 +32,7 @@ private _stateArr = [
 	
 	/****METHODS***/
 	["showState",            RJET_fnc_showEngineState],
+	["updateHUD",        RJET_fnc_engineTickUpdateHUD],
 	["resetEngineCycle",    RJET_fnc_resetEngineCycle],
 	["getEffectPos",            RJET_fnc_getEffectPos],
 	["getPilot", {objectParent (_self get "jetPack")}],
@@ -44,7 +46,7 @@ private _stateArr = [
 	["initAutoHover",        RJET_fnc_initAutoHover],
 	["endAutoHover",          RJET_fnc_endAutoHover],
 
-	//load (Minimum 1)
+	// Load (Minimum 1)
 	["addLoad",                                RJET_fnc_engineAddLoad],
 	["resetLoad",                       {_self set ["engineLoad", 1]}],
 	["loadCoef", {(_self get "engineLoad")/(_self get "maxEngineLoad")}],

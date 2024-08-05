@@ -16,8 +16,8 @@ private _titlePos  = [_xPos, _yPos-(_titleSize*1.5), _titleSize,_titleSize/_rati
 private _top       = _yPos;
 private _bottom    = _yPos+_height;
 
-private _fill     = _self call ["addImage", ["GUI_Components\paa\SquareFill.paa",_position,[0,1,0,0.5]]];
-private _frame    = _self call ["addImage", ["GUI_Components\paa\Square_edge.paa",_position, _color]];
+private _fill     = _self call ["addImage", ["\220th-jetPack\GUI_Components\paa\SquareFill.paa",_position,[0,1,0,0.5]]];
+private _frame    = _self call ["addImage", ["\220th-jetPack\GUI_Components\paa\Square_edge.paa",_position, _color]];
 private _titleImg = _self call ["addImage", ["",_titlePos]];
 
 _titleImg call ["setText", [_title,0.53]];
@@ -31,6 +31,8 @@ private _dataArr = [
 	["size",    _height],
 	["progress",      1],
 
+	["hide",                   RJET_fnc_hideProgressBar],
+	["show",                   RJET_fnc_showProgressBar],
 	["setProgress",           RJET_fnc_setProgressOnBar],
 	["setTitle",           RJET_fnc_setProgressBarTitle],
 	["setFillColor",   RJET_fnc_setProgressBarFillColor],

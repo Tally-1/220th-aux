@@ -23,3 +23,12 @@
 [42m] Design retouching, colors final, altimeter redesign.
 [89m] Packing mod, updating functions library, refactoring.
 ~1 374 minutes (22.9 hours)
+
+[49m]  Reorganizing GUI code, Implementing color picker.
+[150m] Hide/show functionality for all elements. Jetpack-mode.
+[136m] Dynamic hide/show on camera-view
+[44m]  Inventory detection and display close/open toggle.
+[68m]  Packing mod, updating functions library.
+~1 821 minutes (30.3 hours)
+
+[74m]  Missile Cam (For the HUD only)
